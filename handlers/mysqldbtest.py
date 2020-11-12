@@ -481,7 +481,7 @@ class ClubMember(DBBase):
         data["state"] = STATE_DEFAULT
         condition = "user_id='{user_id}' and state='{state}' order by created_at desc"
         condition = condition.format(**data) # 拼接的where后面的条件字符串语句
-        sql = self.get_select_sql(field, condition)       
+        sql = self.get_select_sql(field, condition)
         one = await self.get_one(sql)
         return one
 """

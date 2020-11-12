@@ -30,10 +30,17 @@ class LoginHandler(BaseHandler):
     def post(self):
         # print(self.request.headers)
         jsonheaders = json.loads(json.dumps(dict(self.request.headers)))
+<<<<<<< HEAD
         # print(jsonheaders)
         # print("-------------------")
         print(jsonheaders.get("User-Agent"))
         # print("-------------------")
+=======
+        print(jsonheaders)
+        print("-------------------")
+        print(jsonheaders.get("User-Agent"))
+        print("-------------------")
+>>>>>>> 37a28c10304c011320c1db8e129d46ff1b5cf7f1
         print(self.get_secure_cookie("visencookie"))
         jsonbody = dict(json.loads(self.request.body))
         username = jsonbody.get("username")
